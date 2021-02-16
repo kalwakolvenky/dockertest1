@@ -1,7 +1,7 @@
 FROM nginx:latest
 LABEL OWNER="venki"
 LABEL EMAIL="venky.leader@gmail.com"
-ENV REPO="https://github.com/mavrick202/dockertest1.git"
+ENV REPO="https://github.com/kalwakolvenky/dockertest1.git"
 RUN apt update \
     && apt install -y nginx net-tools curl unzip wget git \
     && git clone ${REPO} /tmp/website \
