@@ -1,6 +1,7 @@
 FROM nginx:latest
 MAINTAINER venky.leader@gmail.com
 RUN apt update -y
+RUN apt install nginx -y
 RUN apt install -y curl
 COPY index.html /usr/share/nginx/html/
 COPY scorekeeper.js /usr/share/nginx/html/
