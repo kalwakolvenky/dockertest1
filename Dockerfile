@@ -6,7 +6,7 @@ RUN apt update \
     && apt install -y nginx net-tools curl unzip wget git \
     && git clone ${REPO} /tmp/website \
     && cd /tmp/website \
-    && cp index.html /var/www/html/index.nginx-debian.html \
-    && cp scorekeeper.js /var/www/html \
-    && cp style.css /var/www/html 
+    && cp index.html /usr/share/nginx/html \
+    && cp scorekeeper.js /usr/share/nginx/html/ \
+    && cp style.css /usr/share/nginx/html/ 
 CMD ["nginx", "-g" , "daemon off;"]    
